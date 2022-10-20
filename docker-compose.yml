@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.8'
 
 services:
   app:
@@ -24,7 +24,7 @@ services:
       - db
 
   db:
-    image: postgres:13-alpine
+    image: postgres:14-alpine
     environment:
       - POSTGRES_DB=devdb
       - POSTGRES_USER=devuser
