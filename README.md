@@ -64,3 +64,9 @@ Para asegurarnos de que podemos subir imágenes en modo producción
 ```shell
 docker compose -f docker-compose-deploy.yml run --rm app sh -c "python manage.py createsuperuser"
 ```
+
+Ver logs
+
+```shell
+docker compose -f docker-compose-deploy.yml logs
+```
