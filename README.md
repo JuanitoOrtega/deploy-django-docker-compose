@@ -70,3 +70,19 @@ Ver logs
 ```shell
 docker compose -f docker-compose-deploy.yml logs
 ```
+
+Si actualizamos nuestro código
+
+1. Desde nuestro ambiente de desarrollo hacemos un push
+2. Desde la terminal de producción hacemos un pull para traernos los cambios
+3. Reconstruimos la imagen de nuestra app
+
+```shell
+docker compose -f docker-compose-deploy.yml build app
+```
+
+4. Lanzamos nuestro servidor en segundo plano sin afectar las dependencias, base de datos o el proxy
+
+```shell
+docker compose -f docker-compose-deploy.yml up --no-deps -d app
+```
